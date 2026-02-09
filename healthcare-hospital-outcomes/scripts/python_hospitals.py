@@ -184,7 +184,7 @@ def benchmark_pandas_vs_duckdb(df: pd.DataFrame) -> None:
 # ---------------------------
 def parse_args() -> argparse.Namespace:
     ap = argparse.ArgumentParser(description="Hospital General Information pipeline (CSV -> Parquet -> DuckDB KPIs).")
-    ap.add_argument("--raw_csv", default="C:/Users/spand/Downloads/cloud-analytics-portfolio-main/cloud-analytics-portfolio-main/healthcare-hospital-outcomes/data/sample/Hospital_General_Information.csv")
+    ap.add_argument("--raw_csv", default="C:/Users/spand/Downloads/cloud-analytics-portfolio-main/cloud-analytics-portfolio-main/data/sample/Hospital_General_Information.csv")
     ap.add_argument("--curated_parquet", default="data/curated/dim_hospital.parquet")
     ap.add_argument("--duckdb_path", default="duckdb/portfolio.duckdb")
     ap.add_argument("--tableau_out_dir", default="outputs/tableau")
