@@ -17,6 +17,12 @@ Analyze hospital-level quality indicators and ratings to:
 > Note: This repository includes a small sample dataset for demonstration.
 > The full dataset can be accessed from the CMS portal.
 
+## Folder Structure
+- `data/sample/` – Sample dataset
+- `sql/` – KPI queries
+- `notebooks/` – Exploratory analysis
+- `docs/` – Data dictionary and documentation
+
 ## Key Metrics (KPIs)
 - Average hospital overall rating
 - Distribution of ratings by state
@@ -32,8 +38,32 @@ Serverless SQL (Athena / Synapse) → Curated Views → Dashboard
 - Python (pandas)
 - Tableau / Power BI (dashboard layer)
 
-## Folder Structure
-- `data/sample/` – Sample dataset
-- `sql/` – KPI queries
-- `notebooks/` – Exploratory analysis
-- `docs/` – Data dictionary and documentation
+# Hospital Analytics Pipeline (Python + DuckDB)
+
+## Overview
+End-to-end analytics pipeline using public CMS hospital data.
+
+## What this project demonstrates
+- Python data validation & cleaning
+- Pandas vs DuckDB performance comparison
+- Parquet-based analytics workflow
+- SQL-defined healthcare KPIs
+- Tableau-ready outputs
+
+## Pipeline Steps
+1. Load raw hospital CSV
+2. Validate schema and keys
+3. Clean and standardize fields
+4. Write curated Parquet dimension table
+5. Load data into DuckDB warehouse
+6. Compute KPIs using SQL
+7. Export KPI outputs for Tableau
+
+## How to run
+```bash
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python pipeline_hospitals.py
+
+
