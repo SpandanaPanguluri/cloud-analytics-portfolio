@@ -1,4 +1,4 @@
-# Healthcare Analytics — Hospital Outcomes & Quality
+# Healthcare Analytics — Hospital Outcomes & Quality Dashboard
 
 ## Business Problem
 Hospital leadership needs visibility into hospital quality and performance
